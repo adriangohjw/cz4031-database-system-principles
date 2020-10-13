@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/abhishekbhagwat/CLionProjects/databaseDesign/main.cpp" "/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles/databaseDesign.dir/main.cpp.o"
   "/Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.cpp" "/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles/databaseDesign.dir/memory-pool.cpp.o"
-  "/Users/abhishekbhagwat/CLionProjects/databaseDesign/sample.cpp" "/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles/databaseDesign.dir/sample.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

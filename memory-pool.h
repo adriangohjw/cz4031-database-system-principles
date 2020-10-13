@@ -55,17 +55,6 @@ public:
      */
     unsigned char *writeRecord(Record record);
 
-    /**
-     * function to deallocate a memory chunk ~ deallocate memory for the record
-     * @param record Record to be deleted form memory chunk
-     * @return status of deallocation of memory
-     */
-//    bool deleteRecord(Record *record);
-//
-//    /**
-//     * function to get the size of a block in the MemoryPool
-//     * @return size of the block
-//     */
     unsigned int getBlkSize(){
         return blkSize;
     }

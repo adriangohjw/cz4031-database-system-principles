@@ -89,9 +89,6 @@
 		<Unit filename="/Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.h">
 			<Option target="databaseDesign"/>
 		</Unit>
-		<Unit filename="/Users/abhishekbhagwat/CLionProjects/databaseDesign/sample.cpp">
-			<Option target="databaseDesign"/>
-		</Unit>
 		<Unit filename="/Users/abhishekbhagwat/CLionProjects/databaseDesign/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -94,12 +94,12 @@ clean: CMakeFiles/databaseDesign.dir/clean
 CMakeFiles/databaseDesign.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target databaseDesign"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target databaseDesign"
 .PHONY : CMakeFiles/databaseDesign.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/databaseDesign.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/databaseDesign.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/databaseDesign.dir/rule

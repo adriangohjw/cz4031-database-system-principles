@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/databaseDesign.dir/main.cpp.o"
   "CMakeFiles/databaseDesign.dir/memory-pool.cpp.o"
-  "CMakeFiles/databaseDesign.dir/sample.cpp.o"
   "databaseDesign"
   "databaseDesign.pdb"
 )

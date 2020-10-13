@@ -62,7 +62,13 @@ bool MemoryPool::allocBlk() {
  */
 unsigned char *MemoryPool::writeRecord(Record record) {
 
-    if(numAllocBlks == 0 || blkSize < (nextFree - (blkPtr + sizeof(record)))){
+    if (numAllocBlks = 0) {
+        bool successFlag = allocBlk();
+        if (successFlag == false)
+            return NULL;
+    }
+
+    if(blkSize < (nextFree - (blkPtr + sizeof(record)))){
         bool successFlag = allocBlk();
         if (successFlag == false)
             return NULL;
@@ -82,18 +88,11 @@ unsigned char *MemoryPool::writeRecord(Record record) {
     return index;
 }
 
-//bool MemoryPool::deleteRecord(Record *record) {
-//    if (record != NULL)
-//        return true;
-//    else {
-//        return false;
-//    }
-//}
-
 /**
  * Destructor
  */
 MemoryPool::~MemoryPool() {
+    // safe deletion of pointers involves using the delete operator and then initialising it to NULL, to allow for future reference
     delete memPoolPtr;
     memPoolPtr = NULL;
     blkPtr = NULL;

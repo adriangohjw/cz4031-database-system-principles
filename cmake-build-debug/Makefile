@@ -197,33 +197,6 @@ memory-pool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/memory-pool.cpp.s
 .PHONY : memory-pool.cpp.s
 
-sample.o: sample.cpp.o
-
-.PHONY : sample.o
-
-# target to build an object file
-sample.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/sample.cpp.o
-.PHONY : sample.cpp.o
-
-sample.i: sample.cpp.i
-
-.PHONY : sample.i
-
-# target to preprocess a source file
-sample.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/sample.cpp.i
-.PHONY : sample.cpp.i
-
-sample.s: sample.cpp.s
-
-.PHONY : sample.s
-
-# target to generate assembly for a file
-sample.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/sample.cpp.s
-.PHONY : sample.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -239,9 +212,6 @@ help:
 	@echo "... memory-pool.o"
 	@echo "... memory-pool.i"
 	@echo "... memory-pool.s"
-	@echo "... sample.o"
-	@echo "... sample.i"
-	@echo "... sample.s"
 .PHONY : help
 
 
