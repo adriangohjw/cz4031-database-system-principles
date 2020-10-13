@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/abhishekbhagwat/CLionProjects/databaseDesign/main.cpp
+iostream
+-
+fstream
+-
+sstream
+-
+memory-pool.h
+/Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.h
+
+/Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.h
+iostream
+-
+vector
+-
+
