@@ -5,40 +5,44 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <vector>
+#include <tuple>
 #include "memory-pool.h"
 
 using namespace std;
 
+typedef unsigned int uint;
+typedef unsigned char uchar;
+
+
 int main() {
-    MemoryPool memPool{900000000, 100};
-    ifstream file("/data/data.tsv");
-    string line;
-    int i = 0;
-    while(getline(file, line)){
-        i++;
-        string title;
-        float avgRating;
-        unsigned int numVote;
+    ifstream dataFile("/Users/abhishekbhagwat/CLionProjects/databaseDesign/data/data.tsv");
+    cout << dataFile.is_open();
 
-//        cout << memPool.getNumAvailBlks() << "\n";
+    MemPool memPool{100000000, 100};
 
-        stringstream linestream(line);
-        getline(linestream, title, '\t');
-        linestream >> avgRating >> numVote;
-        cout << title << ' ' << avgRating << ' ' << numVote << '\n';
+    vector<tuple<void *, uint>> dataset;
 
-        Record record {title, avgRating, numVote};
-        memPool.writeRecord(record);
+    if(dataFile.is_open()) {
+        string line;
+        while (getline(dataFile, line)) {
+            Record record;
+//            cout << memPool.getMemPoolUsedBlks();
 
-        cout << memPool.getNumAvailBlks() << "\n";
+            stringstream linestream(line);
+            getline(linestream, record.tconst, '\t');
+            linestream >> record.averageRating >> record.numVotes;
+            tuple<void *, uint> dataRecord = memPool.writeRecord(sizeof(record));
+            dataset.push_back(dataRecord);
+
+            // void * pointer stores the address of the block, but in order to perform pointer arithmetic
+            // we have to cast into uint or uchar pointer.
+
+            // memcpy may seem to be potentially dangerous, but it is safe in this usage as it is the only function that
+            // allows copying of byte data and it is being performed inside the container.
+            memcpy(reinterpret_cast<uint*>(get<0>(dataRecord)) + get<1>(dataRecord), &record, sizeof(record));
+            cout << "Record address: " << reinterpret_cast<uint*>(get<0>(dataRecord))+ get<1>(dataRecord) << "\n";
+        }
     }
-
-// ---------------- Test -------------------
-//    Record test{"tt0000001", 10.0, 123456};
-//    Record test1{"tt0000002", 0.0, 654321};
-//
-//    memPool.writeRecord(test);
-//    memPool.writeRecord(test1);
-
     return 0;
 }

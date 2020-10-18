@@ -3,4 +3,4 @@ project(databaseDesign)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(databaseDesign memory-pool.h memory-pool.cpp main.cpp)
+add_executable(memory-pool.h memory-pool.cpp main.cpp)

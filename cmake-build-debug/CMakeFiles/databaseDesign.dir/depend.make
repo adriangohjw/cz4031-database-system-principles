@@ -7,5 +7,3 @@ CMakeFiles/databaseDesign.dir/main.cpp.o: ../memory-pool.h
 CMakeFiles/databaseDesign.dir/memory-pool.cpp.o: ../memory-pool.cpp
 CMakeFiles/databaseDesign.dir/memory-pool.cpp.o: ../memory-pool.h
 
-CMakeFiles/databaseDesign.dir/sample.cpp.o: ../sample.cpp
-
