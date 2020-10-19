@@ -63,7 +63,7 @@ public:
       * @param recordSize size of memory to be reserved for the particular record
       * @return tuple containing address of the blkPtr and the relative offset of the record inside the block. <blkPtr address, relative offset from blkPtr>
       */
-    tuple<void * , uint> writeRecord(uint recordSize);
+     tuple<void *, uint> writeRecord(uint recordSize);
 
 
      /**

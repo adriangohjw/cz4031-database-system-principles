@@ -22,7 +22,6 @@ typedef unsigned char uchar;
 
 using namespace std;
 
-
 /**
  * MemPool Constructor
  * @param memPoolSize Overall size of the MemPool
@@ -89,6 +88,7 @@ tuple<void * , uint> MemPool::writeRecord(uint recordSize) {
     // void * pointer stores the address of the block, but in order to perform pointer arithmetic, this further needs
     // to be cast into uint or uchar pointer
     tuple<void * , uint> recordAddress(blkPtr, curBlkUsed);
+
     memPoolUsedRecords+=recordSize;
     curBlkUsed+=recordSize;
 
