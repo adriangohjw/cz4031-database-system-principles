@@ -18,18 +18,24 @@ typedef unsigned char uchar;
 
 int main() {
     ifstream dataFile("/Users/abhishekbhagwat/CLionProjects/databaseDesign/data/data.tsv");
-    cout << dataFile.is_open();
-
     MemPool memPool{100000000, 100};
-
     vector<tuple<void *, uint>> dataset;
+
+    cout <<"<------------------- Database Storage Component ------------------->\n"
+           "Database is created by allocating a memory pool, divided into blocks\n"
+           "We shall make use of a fixed-size memory pool for storage\n"
+           "Fixed-size implies that size of memory to be allocated is pre-decided \n"
+           "Database is created by allocating a memory pool -> divided into blocks\n"
+
+           "Blocks consists of records stored sequentially"<< "\n" << "\n";
+
+    cout << "<------------------- Data file read started ------------------->" << "\n" << "\n";
 
     if(dataFile.is_open()) {
         string line;
+        int counter = 1;
         while (getline(dataFile, line)) {
             Record record;
-//            cout << memPool.getMemPoolUsedBlks();
-
             stringstream linestream(line);
             getline(linestream, record.tconst, '\t');
             linestream >> record.averageRating >> record.numVotes;
@@ -42,8 +48,19 @@ int main() {
             // allows copying of byte data and it is being performed inside the container.
             void *rcdAdr = (uchar *)get<0>(dataRecord) + get<1>(dataRecord);
             memcpy(rcdAdr, &record, sizeof(record));
-//            cout<< "Block Address: " << get<0>(dataRecord) << " Record address: " << rcdAdr << "\n";
+//            cout << "Read Verbose" << "\n";
+//            cout << "Record ID: " << counter << " Block Address: " << get<0>(dataRecord) << " Record Address: " << rcdAdr << '\n';
+            counter++;
         }
+        cout << "<------------------- Data file read started ------------------->" << "\n" << "\n";
+
+        cout << "<------------------- Database Statistics ------------------->" << "\n";
+        cout << "1. Size of Memory Pool: " << memPool.getMemPoolSize() << "\n";
+        cout << "2. Size of 1 block: " << memPool.getBlkSize() << "\n";
+        cout << "3. Number of blocks available at start: " << memPool.getMemPoolSize() / memPool.getBlkSize() << "\n";
+        cout << "4. Number of allocated blocks: " << memPool.getNumAllocBlks() << "\n";
+        cout << "5. Number of available blocks: " << memPool.getNumAvailBlks() << "\n";
+
     }
 
     // key:value pair to hold pair of memory addresses.
@@ -63,9 +80,9 @@ int main() {
          }
 
          void *recordAddress = (uchar *)blocksInMemory.at(blockAddress) + offset;
-         cout << "Ratings block address " << blocksInMemory.at(blockAddress) << " Offset: " << offset <<"\n";
-         cout << (*(Record *) recordAddress).averageRating << " at " << recordAddress << '\n';
-         cout << (*(Record *) recordAddress).tconst << " at " << recordAddress << '\n';
+//         cout << "Ratings block address " << blocksInMemory.at(blockAddress) << " Offset: " << offset <<"\n";
+//         cout << (*(Record *) recordAddress).averageRating << " at " << recordAddress << '\n';
+//         cout << (*(Record *) recordAddress).tconst << " at " << recordAddress << '\n';
 
      }
     return 0;
