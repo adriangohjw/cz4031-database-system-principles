@@ -9,6 +9,9 @@
 #include <tuple>
 #include <unordered_map>
 #include "memory-pool.h"
+#include <cstring>
+#include "BplusTree.cpp"
+
 
 using namespace std;
 
@@ -17,7 +20,7 @@ typedef unsigned char uchar;
 
 
 int main() {
-    ifstream dataFile("/Users/abhishekbhagwat/CLionProjects/databaseDesign/data/data.tsv");
+    ifstream dataFile("/home/hitesh/CLionProjects/cz4031-database-system-principles/data/data_short.tsv");
     cout << dataFile.is_open();
 
     MemPool memPool{100000000, 100};
@@ -63,10 +66,28 @@ int main() {
          }
 
          void *recordAddress = (uchar *)blocksInMemory.at(blockAddress) + offset;
-         cout << "Ratings block address " << blocksInMemory.at(blockAddress) << " Offset: " << offset <<"\n";
+         //cout << "Ratings block address " << blocksInMemory.at(blockAddress) << " Offset: " << offset <<"\n";
          cout << (*(Record *) recordAddress).averageRating << " at " << recordAddress << '\n';
-         cout << (*(Record *) recordAddress).tconst << " at " << recordAddress << '\n';
+         //cout << (*(Record *) recordAddress).tconst << " at " << recordAddress << '\n';
+
+
 
      }
+    BplusTree node;
+    int search_index;
+    cout<< node.search(node.root, 5.0, &search_index)<<"\n"<<search_index<<"\n";
+    node.insert(5.0);
+    node.insert(10.0);
+    node.insert(15.0);
+    node.insert(20.0);
+    node.insert(25.0);
+    node.insert(30.0);
+    node.insert(35.0);
+    node.insert(40.0);
+    node.insert(45.0);
+    node.insert(50.0);
+    node.read(node.root);
+    cout<< node.search(node.root, 10.0, &search_index)<<"\n"<<search_index<<"\n";
+    cout<< node.search(node.root, 4.0, &search_index)<<"\n"<<search_index<<"\n";
     return 0;
 }

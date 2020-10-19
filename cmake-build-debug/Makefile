@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/abhishekbhagwat/CLionProjects/databaseDesign
+CMAKE_SOURCE_DIR = /home/hitesh/CLionProjects/cz4031-database-system-principles
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug
+CMAKE_BINARY_DIR = /home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-bui
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/129/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/CMakeFiles /home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,33 @@ memory-pool.h: cmake_check_build_system
 memory-pool.h/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/build
 .PHONY : memory-pool.h/fast
+
+BplusTree.o: BplusTree.cpp.o
+
+.PHONY : BplusTree.o
+
+# target to build an object file
+BplusTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/BplusTree.cpp.o
+.PHONY : BplusTree.cpp.o
+
+BplusTree.i: BplusTree.cpp.i
+
+.PHONY : BplusTree.i
+
+# target to preprocess a source file
+BplusTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/BplusTree.cpp.i
+.PHONY : BplusTree.cpp.i
+
+BplusTree.s: BplusTree.cpp.s
+
+.PHONY : BplusTree.s
+
+# target to generate assembly for a file
+BplusTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/BplusTree.cpp.s
+.PHONY : BplusTree.cpp.s
 
 main.o: main.cpp.o
 
@@ -206,6 +233,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... memory-pool.h"
+	@echo "... BplusTree.o"
+	@echo "... BplusTree.i"
+	@echo "... BplusTree.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

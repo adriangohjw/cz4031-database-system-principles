@@ -4,13 +4,15 @@
 
 #ifndef DATABASEDESIGN_MEMORY_POOL_H
 #define DATABASEDESIGN_MEMORY_POOL_H
-
+#include <cstring>
 #include<iostream>
 #include <vector>
 #include <tuple>
 #include <algorithm>
 
-
+const int MAX = 3;
+const int MIN_LEAF = 7;
+const int MIN_NON_LEAF = 6;
 typedef unsigned int uint;
 typedef unsigned char uchar;
 

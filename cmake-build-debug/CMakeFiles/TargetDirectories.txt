@@ -1,3 +1,3 @@
-/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles/memory-pool.h.dir
+/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/CMakeFiles/memory-pool.h.dir
