@@ -16,6 +16,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <cstring>
 
 typedef unsigned int uint;
 typedef unsigned char uchar;

@@ -3,4 +3,4 @@ project(databaseDesign)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXE_LINKER_FLAGS "-static-libstdc++")
-add_executable(memory-pool.h memory-pool.cpp main.cpp)
+add_executable(memory-pool.h memory-pool.cpp main.cpp BplusTree.cpp)
