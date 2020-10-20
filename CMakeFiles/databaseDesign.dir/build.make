@@ -66,7 +66,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/abhishekbhagwat/CLionProjects/databaseDesign
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/abhishekbhagwat/CLionProjects/databaseDesign
 
 # Include any dependencies generated for this target.
 include CMakeFiles/databaseDesign.dir/depend.make
@@ -77,22 +77,9 @@ include CMakeFiles/databaseDesign.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/databaseDesign.dir/flags.make
 
-CMakeFiles/databaseDesign.dir/sample.cpp.o: CMakeFiles/databaseDesign.dir/flags.make
-CMakeFiles/databaseDesign.dir/sample.cpp.o: ../sample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/databaseDesign.dir/sample.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/databaseDesign.dir/sample.cpp.o -c /Users/abhishekbhagwat/CLionProjects/databaseDesign/sample.cpp
-
-CMakeFiles/databaseDesign.dir/sample.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/databaseDesign.dir/sample.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abhishekbhagwat/CLionProjects/databaseDesign/sample.cpp > CMakeFiles/databaseDesign.dir/sample.cpp.i
-
-CMakeFiles/databaseDesign.dir/sample.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/databaseDesign.dir/sample.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhishekbhagwat/CLionProjects/databaseDesign/sample.cpp -o CMakeFiles/databaseDesign.dir/sample.cpp.s
-
 CMakeFiles/databaseDesign.dir/memory-pool.cpp.o: CMakeFiles/databaseDesign.dir/flags.make
-CMakeFiles/databaseDesign.dir/memory-pool.cpp.o: ../memory-pool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/databaseDesign.dir/memory-pool.cpp.o"
+CMakeFiles/databaseDesign.dir/memory-pool.cpp.o: memory-pool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abhishekbhagwat/CLionProjects/databaseDesign/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/databaseDesign.dir/memory-pool.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/databaseDesign.dir/memory-pool.cpp.o -c /Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.cpp
 
 CMakeFiles/databaseDesign.dir/memory-pool.cpp.i: cmake_force
@@ -104,8 +91,8 @@ CMakeFiles/databaseDesign.dir/memory-pool.cpp.s: cmake_force
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.cpp -o CMakeFiles/databaseDesign.dir/memory-pool.cpp.s
 
 CMakeFiles/databaseDesign.dir/main.cpp.o: CMakeFiles/databaseDesign.dir/flags.make
-CMakeFiles/databaseDesign.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/databaseDesign.dir/main.cpp.o"
+CMakeFiles/databaseDesign.dir/main.cpp.o: main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abhishekbhagwat/CLionProjects/databaseDesign/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/databaseDesign.dir/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/databaseDesign.dir/main.cpp.o -c /Users/abhishekbhagwat/CLionProjects/databaseDesign/main.cpp
 
 CMakeFiles/databaseDesign.dir/main.cpp.i: cmake_force
@@ -118,19 +105,17 @@ CMakeFiles/databaseDesign.dir/main.cpp.s: cmake_force
 
 # Object files for target databaseDesign
 databaseDesign_OBJECTS = \
-"CMakeFiles/databaseDesign.dir/sample.cpp.o" \
 "CMakeFiles/databaseDesign.dir/memory-pool.cpp.o" \
 "CMakeFiles/databaseDesign.dir/main.cpp.o"
 
 # External object files for target databaseDesign
 databaseDesign_EXTERNAL_OBJECTS =
 
-databaseDesign: CMakeFiles/databaseDesign.dir/sample.cpp.o
 databaseDesign: CMakeFiles/databaseDesign.dir/memory-pool.cpp.o
 databaseDesign: CMakeFiles/databaseDesign.dir/main.cpp.o
 databaseDesign: CMakeFiles/databaseDesign.dir/build.make
 databaseDesign: CMakeFiles/databaseDesign.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable databaseDesign"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/abhishekbhagwat/CLionProjects/databaseDesign/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable databaseDesign"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/databaseDesign.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -143,6 +128,6 @@ CMakeFiles/databaseDesign.dir/clean:
 .PHONY : CMakeFiles/databaseDesign.dir/clean
 
 CMakeFiles/databaseDesign.dir/depend:
-	cd /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/abhishekbhagwat/CLionProjects/databaseDesign /Users/abhishekbhagwat/CLionProjects/databaseDesign /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles/databaseDesign.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/abhishekbhagwat/CLionProjects/databaseDesign && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/abhishekbhagwat/CLionProjects/databaseDesign /Users/abhishekbhagwat/CLionProjects/databaseDesign /Users/abhishekbhagwat/CLionProjects/databaseDesign /Users/abhishekbhagwat/CLionProjects/databaseDesign /Users/abhishekbhagwat/CLionProjects/databaseDesign/CMakeFiles/databaseDesign.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/databaseDesign.dir/depend
 

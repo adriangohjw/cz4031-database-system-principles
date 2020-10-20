@@ -4,86 +4,117 @@
 
 #ifndef DATABASEDESIGN_MEMORY_POOL_H
 #define DATABASEDESIGN_MEMORY_POOL_H
-
-#include <iostream>
+#include <cstring>
+#include<iostream>
 #include <vector>
+#include <tuple>
+#include <algorithm>
+
+const int MAX = 3;
+const int MIN_LEAF = 7;
+const int MIN_NON_LEAF = 6;
+typedef unsigned int uint;
+typedef unsigned char uchar;
 
 using namespace std;
 
 // Structure of the record being read from the data file
+
 struct Record {
-    string tconst;
+    char tconst[10];
     float averageRating;
-    unsigned int numVotes;
+    uint numVotes;
 };
 
-class MemoryPool {
+class MemPool {
 private:
-    unsigned char *memPoolPtr;
-    unsigned char *blkPtr;
-    unsigned char *nextFree;
-    unsigned int memoryPoolSize;
-    unsigned int blkSize;
-    unsigned int memoryPoolUsed;
+    uchar *memPoolPtr;
+    uchar *blkPtr;
+
+    uint memPoolSize;
+    uint blkSize;
+    uint memPoolUsedBlks;
+    uint memPoolUsedRecords;
+    uint curBlkUsed;
+
     int numAllocBlks;
     int numAvailBlks;
 
 public:
     /**
-     * Constructor to initialize class MemoryPool with the given arguments
+     * Constructor to initialize class MemPool with the given arguments
      * @param bufferSize Size of the buffer memory pool
-     * @param blkSize Size of the block to be allocated in the the MemoryPool
+     * @param blkSize Size of the block to be allocated in the the MemPool
      */
-    MemoryPool(unsigned int memoryPoolSize, unsigned int blkSize);
+    MemPool(uint memPoolSize, uint blkSize);
+
+    /**
+     * Destructor
+     */
+    ~MemPool();
 
     /**
      * function to allocate block in the memory pool
      * @return False if block is not allocated (ERROR)
      */
+
     bool allocBlk();
 
-    /**
-     * function to deallocate block in the buffer pool
-     * @return False if block is not deallocated (ERROR)
-     */
-    bool deallocBlk();
+     /**
+     * function to allocate memory for a single record
+      * @param recordSize size of memory to be reserved for the particular record
+      * @return tuple containing address of the blkPtr and the relative offset of the record inside the block. <blkPtr address, relative offset from blkPtr>
+      */
+     tuple<void *, uint> writeRecord(uint recordSize);
+
+
+     /**
+     * function to delete the record at a particular memory address or if a block has one record, to delete the memory reserved by the block
+      * @param blkAddress starting address of the block where the record resides
+      * @param relativeOffset relative address of the record inside the block
+      * @param recordSize size of the record stored at the address
+      * @return status of deletion of the record
+      */
+    bool deleteRecord(uchar *blkAddress, uint relativeOffset, uint recordSize);
 
     /**
-     * function to allocate a memory chunk ~ allocate memory for a single record
-     * @param record Record to be written to memory chunk
-     * @return Pointer to an unused space in the memory pool
+     * function to get the size of each block
+     * @return size of block in bytes
      */
-    unsigned char *writeRecord(Record record);
-
-    /**
-     * function to deallocate a memory chunk ~ deallocate memory for the record
-     * @param record Record to be deleted form memory chunk
-     * @return status of deallocation of memory
-     */
-//    bool deleteRecord(Record *record);
-//
-//    /**
-//     * function to get the size of a block in the MemoryPool
-//     * @return size of the block
-//     */
-    unsigned int getBlkSize(){
+    uint getBlkSize(){
         return blkSize;
     }
 
     /**
      * function to get the size of the memory pool
-     * @return size of the MemoryPool
+     * @return size of the MemPool
      */
-    unsigned int getMemPoolSize() {
-        return memoryPoolSize;
+    uint getMemPoolSize() {
+        return memPoolSize;
     }
 
     /**
-     * function to get amount of memory used in the MemoryPool
-     * @return size of used up memory in the MemoryPool
+     * function to get amount of memory used in the MemPool based on number of blocks allocated
+     * @return size of used up memory in the MemPool
      */
-    int getMemPoolUsed() {
-        return memoryPoolUsed;
+    int getMemPoolUsedBlks() {
+        return memPoolUsedBlks;
+    }
+
+    /**
+     * function to get amount of memory used in the MemPool based on number of records written
+     * @return size of used up memory in the MemPool
+     */
+    int getMemPoolUsedRecords() {
+        return memPoolUsedRecords;
+    }
+
+    /**
+     * function to get the amount of memory used in the current block pointed by blkPtr
+     * @return size of used up memory in the current block
+     */
+    int getCurBlkUsed(){
+        return curBlkUsed;
     }
 
     /**
@@ -95,17 +126,13 @@ public:
     }
 
     /**
-     * function to get the number of available blocks in the MemoryPool
-     * @return number of available blocks in MemoryPool
+     * function to get the number of available blocks in the MemPool
+     * @return number of available blocks in MemPool
      */
     int getNumAvailBlks() {
         return numAvailBlks;
     }
-
-    /**
-     * Destructor
-     */
-    ~MemoryPool();
 };
 
 #endif //DATABASEDESIGN_MEMORY_POOL_H
+

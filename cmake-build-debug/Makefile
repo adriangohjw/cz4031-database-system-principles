@@ -131,17 +131,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named databaseDesign
+# Target rules for targets named memory-pool.h
 
 # Build rule for target.
-databaseDesign: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 databaseDesign
-.PHONY : databaseDesign
+memory-pool.h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 memory-pool.h
+.PHONY : memory-pool.h
 
 # fast build rule for target.
-databaseDesign/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/build
-.PHONY : databaseDesign/fast
+memory-pool.h/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/build
+.PHONY : memory-pool.h/fast
+
+BplusTree.o: BplusTree.cpp.o
+
+.PHONY : BplusTree.o
+
+# target to build an object file
+BplusTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/BplusTree.cpp.o
+.PHONY : BplusTree.cpp.o
+
+BplusTree.i: BplusTree.cpp.i
+
+.PHONY : BplusTree.i
+
+# target to preprocess a source file
+BplusTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/BplusTree.cpp.i
+.PHONY : BplusTree.cpp.i
+
+BplusTree.s: BplusTree.cpp.s
+
+.PHONY : BplusTree.s
+
+# target to generate assembly for a file
+BplusTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/BplusTree.cpp.s
+.PHONY : BplusTree.cpp.s
 
 main.o: main.cpp.o
 
@@ -149,7 +176,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -158,7 +185,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -167,7 +194,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 memory-pool.o: memory-pool.cpp.o
@@ -176,7 +203,7 @@ memory-pool.o: memory-pool.cpp.o
 
 # target to build an object file
 memory-pool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/memory-pool.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/memory-pool.cpp.o
 .PHONY : memory-pool.cpp.o
 
 memory-pool.i: memory-pool.cpp.i
@@ -185,7 +212,7 @@ memory-pool.i: memory-pool.cpp.i
 
 # target to preprocess a source file
 memory-pool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/memory-pool.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/memory-pool.cpp.i
 .PHONY : memory-pool.cpp.i
 
 memory-pool.s: memory-pool.cpp.s
@@ -194,35 +221,8 @@ memory-pool.s: memory-pool.cpp.s
 
 # target to generate assembly for a file
 memory-pool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/memory-pool.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/memory-pool.cpp.s
 .PHONY : memory-pool.cpp.s
-
-sample.o: sample.cpp.o
-
-.PHONY : sample.o
-
-# target to build an object file
-sample.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/sample.cpp.o
-.PHONY : sample.cpp.o
-
-sample.i: sample.cpp.i
-
-.PHONY : sample.i
-
-# target to preprocess a source file
-sample.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/sample.cpp.i
-.PHONY : sample.cpp.i
-
-sample.s: sample.cpp.s
-
-.PHONY : sample.s
-
-# target to generate assembly for a file
-sample.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseDesign.dir/build.make CMakeFiles/databaseDesign.dir/sample.cpp.s
-.PHONY : sample.cpp.s
 
 # Help Target
 help:
@@ -232,16 +232,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... databaseDesign"
+	@echo "... memory-pool.h"
+	@echo "... BplusTree.o"
+	@echo "... BplusTree.i"
+	@echo "... BplusTree.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... memory-pool.o"
 	@echo "... memory-pool.i"
 	@echo "... memory-pool.s"
-	@echo "... sample.o"
-	@echo "... sample.i"
-	@echo "... sample.s"
 .PHONY : help
 
 
