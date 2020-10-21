@@ -55,19 +55,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/abhishekbhagwat/CLionProjects/databaseDesign
+CMAKE_SOURCE_DIR = /home/hitesh/CLionProjects/cz4031-database-system-principles
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug
+CMAKE_BINARY_DIR = /home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -94,14 +94,14 @@ clean: CMakeFiles/memory-pool.h.dir/clean
 CMakeFiles/memory-pool.h.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/memory-pool.h.dir/build.make CMakeFiles/memory-pool.h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target memory-pool.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target memory-pool.h"
 .PHONY : CMakeFiles/memory-pool.h.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/memory-pool.h.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/memory-pool.h.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/memory-pool.h.dir/rule
 
 # Convenience name for target.

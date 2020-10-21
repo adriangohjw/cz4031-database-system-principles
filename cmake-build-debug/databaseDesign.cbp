@@ -8,91 +8,95 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug"/>
+				<Option working_dir="/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug"/>
+				<Option working_dir="/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug"/>
+				<Option working_dir="/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="memory-pool.h">
-				<Option output="/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/memory-pool.h" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug"/>
+				<Option output="/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/memory-pool.h" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 memory-pool.h"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 memory-pool.h"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="memory-pool.h/fast">
-				<Option output="/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/memory-pool.h" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug"/>
+				<Option output="/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/memory-pool.h" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 memory-pool.h/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/abhishekbhagwat/CLionProjects/databaseDesign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 memory-pool.h/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/hitesh/CLionProjects/cz4031-database-system-principles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/abhishekbhagwat/CLionProjects/databaseDesign/BplusTree.cpp">
+		<Unit filename="/home/hitesh/CLionProjects/cz4031-database-system-principles/b-plus-tree.cpp">
 			<Option target="memory-pool.h"/>
 		</Unit>
-		<Unit filename="/Users/abhishekbhagwat/CLionProjects/databaseDesign/main.cpp">
+		<Unit filename="/home/hitesh/CLionProjects/cz4031-database-system-principles/main.cpp">
 			<Option target="memory-pool.h"/>
 		</Unit>
-		<Unit filename="/Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.cpp">
+		<Unit filename="/home/hitesh/CLionProjects/cz4031-database-system-principles/memory-pool.cpp">
 			<Option target="memory-pool.h"/>
 		</Unit>
-		<Unit filename="/Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.h">
+		<Unit filename="/home/hitesh/CLionProjects/cz4031-database-system-principles/memory-pool.h">
 			<Option target="memory-pool.h"/>
 		</Unit>
-		<Unit filename="/Users/abhishekbhagwat/CLionProjects/databaseDesign/CMakeLists.txt">
+		<Unit filename="/home/hitesh/CLionProjects/cz4031-database-system-principles/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

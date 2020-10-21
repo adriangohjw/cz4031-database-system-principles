@@ -10,9 +10,9 @@
 #include <tuple>
 #include <algorithm>
 
-const int MAX = 3;
-const int MIN_LEAF = 7;
-const int MIN_NON_LEAF = 6;
+const int MAX = 5;
+//const int MIN_LEAF = 7;
+//const int MIN_NON_LEAF = 6;
 typedef unsigned int uint;
 typedef unsigned char uchar;
 

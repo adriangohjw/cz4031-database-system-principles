@@ -6,15 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/abhishekbhagwat/CLionProjects/databaseDesign/BplusTree.cpp
+/home/hitesh/CLionProjects/cz4031-database-system-principles/b-plus-tree.cpp
 iostream
 -
-cmath
+string
+-
+sstream
+-
+fstream
+-
+climits
 -
 memory-pool.h
-/Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.h
+/home/hitesh/CLionProjects/cz4031-database-system-principles/memory-pool.h
 
-/Users/abhishekbhagwat/CLionProjects/databaseDesign/main.cpp
+/home/hitesh/CLionProjects/cz4031-database-system-principles/main.cpp
 iostream
 -
 fstream
@@ -28,15 +34,15 @@ tuple
 unordered_map
 -
 memory-pool.h
-/Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.h
+/home/hitesh/CLionProjects/cz4031-database-system-principles/memory-pool.h
 cstring
 -
-BplusTree.cpp
-/Users/abhishekbhagwat/CLionProjects/databaseDesign/BplusTree.cpp
+b-plus-tree.cpp
+/home/hitesh/CLionProjects/cz4031-database-system-principles/b-plus-tree.cpp
 typeinfo
 -
 
-/Users/abhishekbhagwat/CLionProjects/databaseDesign/memory-pool.h
+/home/hitesh/CLionProjects/cz4031-database-system-principles/memory-pool.h
 cstring
 -
 iostream

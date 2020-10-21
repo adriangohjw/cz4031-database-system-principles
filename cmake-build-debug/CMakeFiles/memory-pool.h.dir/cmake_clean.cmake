@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/memory-pool.h.dir/BplusTree.cpp.o"
+  "CMakeFiles/memory-pool.h.dir/b-plus-tree.cpp.o"
   "CMakeFiles/memory-pool.h.dir/main.cpp.o"
   "CMakeFiles/memory-pool.h.dir/memory-pool.cpp.o"
   "memory-pool.h"
